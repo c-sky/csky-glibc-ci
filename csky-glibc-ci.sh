@@ -1,4 +1,5 @@
 ROOT_PATH=`pwd`
+mkdir -p output/build/
 rm output/build/glibc-* -rf
 tar -xf output/images/glibc.tar.xz -C output/build/
 cd output/build/glibc-*/
