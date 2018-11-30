@@ -24,8 +24,8 @@ start() {
 	/usr/sbin/sshd
 	touch /var/lock/sshd
 	ifconfig eth0 172.16.170.121 netmask 255.255.255.0
-	mkdir /home
-	mount -t nfs 172.16.170.246:/home/  /home  -o nolock,tcp,sync
+	mkdir /root/builds/
+	mount -t nfs 172.16.170.54:/root/builds/ /root/builds/ -o nolock,tcp,sync
 	echo "OK"
         while true;do ls;sleep 30;done
 }
