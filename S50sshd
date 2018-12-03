@@ -27,7 +27,7 @@ start() {
 	mkdir /root/builds/
 	mount -t nfs 172.16.170.54:/root/builds/ /root/builds/ -o nolock,tcp,sync
 	echo "OK"
-        while true;do ls /;sleep 30;done
+        while true;do ls /root;sleep 30;done
 }
 stop() {
 	printf "Stopping sshd: "
