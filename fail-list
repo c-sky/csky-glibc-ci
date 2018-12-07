@@ -1,0 +1,16 @@
+FAIL cases:
+1. nptl/tst-thread_local1
+   seems lack c++ support, the gcc frountend can not generate constructor
+   and destructor for static, anonymous_namespace and extern variables.
+2. sunrpc/bug20790
+   It fails because the testing environment lacks native cpp.
+3. nptl/tst-_res1
+   It fails because symbol _res is incorrect linked.
+4. posix/tst-chmod
+   some time fail, tst-chmod may pass after retry.
+5. The following three cases some time get into deadlock when the child
+   return before the parent thread start to wait. I don know what is
+   the expect behaviour under this condition.
+   misc/tst-clone3
+   tst-mallocfork
+   tst-mallocfork2
