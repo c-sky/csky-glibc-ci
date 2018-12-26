@@ -26,7 +26,7 @@ start() {
 	ifconfig eth0 172.16.170.233 netmask 255.255.255.0
 	mkdir -p /root/builds/
 	sleep 20
-	mount -t nfs 172.16.170.65:/root/builds/ /root/builds/ -o nolock,tcp,sync
+	mount -t nfs 172.16.170.14:/root/builds/ /root/builds/ -o nolock,tcp,sync
 	echo "OK"
         while true;do ls /root;sleep 30;done
 }
