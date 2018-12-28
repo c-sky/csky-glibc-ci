@@ -12,4 +12,4 @@ make > make.log
 make check > make_check.log
 cd -
 output/host/csky-glibc-ci/make-check.sh&
-output/host/csky-qemu/bin/qemu-system-cskyv2 -machine virt -cpu ck810f -kernel output/images/vmlinux -dtb output/images/qemu_glibc_ci.dtb -nographic -net nic -net tap,script=/etc/qemu-ifup,downscript=no
+output/host/csky-qemu/bin/qemu-system-cskyv2 -machine virt -cpu ck810f -kernel output/images/vmlinux -dtb output/images/qemu_glibc_ci.dtb -nographic -net nic -net tap,ifname=tap0
